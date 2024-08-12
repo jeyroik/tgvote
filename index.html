@@ -67,9 +67,9 @@
         <div align="center">
             <a href="https://ton.org/"><img width="48" src="./assets/tapps.png" alt="logo of telegram web apps"></a>
         </div>
-        <h1>Modals</h1>
-        <button onclick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
-        <button onclick="showPopup();">Launch Popup</button>
+        <h1>Опросы</h1>
+        <button onclick="Telegram.WebApp.showAlert('Создание опросов доступно ограниченному кругу лиц!');">Создать</button>
+        <button onclick="showPopup();">Пройти</button>
 
         <h1>Links</h1>
         <ul>
@@ -85,7 +85,7 @@
         </ul>
 
         <h1>Buttons</h1>
-        <button onclick="Telegram.WebApp.expand();">Expand Webview</button>
+        <button onclick="Telegram.WebApp.expand();">Расширить</button>
         <button onclick="toggleMainButton();">Toggle Main Button</button>
     </main>
     <div id="viewport"></div>
@@ -113,15 +113,17 @@
         // Function to call showPopup API
         function showPopup() {
             Telegram.WebApp.showPopup({
-                title: 'Title',
-                message: 'Some message',
+                title: 'Опрос',
+                message: '<input type="text" placeholder="Введите ссылку на опрос или его ID">',
                 buttons: [
-                    {id: 'link', type: 'default', text: 'Open ton.org'},
+                    {id: 'existed', type: 'default', text: 'Открыть'},
                     {type: 'cancel'},
                 ]
             }, function(btn) {
                 if (btn === 'link') {
                     Telegram.WebApp.openLink('https://ton.org/');
+                } else if (btn === 'existed'){
+                    Telegram.WebAapp.openLink('https://jeyroik.github.io/tgvote/')
                 }
             });
         };
