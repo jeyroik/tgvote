@@ -85,17 +85,16 @@
         </ul>
 
         <h1>Buttons</h1>
-        <button onclick="Telegram.WebApp.expand();">Расширить</button>
-        <button onclick="toggleMainButton();">Toggle Main Button</button>
     </main>
-    <div id="viewport"></div>
-    <div id="viewport-params-size"></div>
-    <div id="viewport-params-expand"></div>
+    <div id="viewport">Viewport</div>
+    <div id="viewport-params-size">size</div>
+    <div id="viewport-params-expand">expand</div>
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <script>
         // Init TWA
         Telegram.WebApp.ready();
-
+        toggleMainButton();
+        Telegram.WebApp.expand();
         // Event occurs whenever theme settings are changed in the user's Telegram app (including switching to night mode).
         Telegram.WebApp.onEvent('themeChanged', function() {
             document.documentElement.className = Telegram.WebApp.colorScheme;
