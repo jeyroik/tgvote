@@ -67,6 +67,12 @@
             display: flex;
             gap: 0px;
         }
+
+        .mm-btn {
+            margin-bottom: 2px;
+            width: 25%;
+            height: 50px;
+        }
     </style>
 </head>
 
@@ -94,10 +100,10 @@
 
         <h1>Buttons</h1>
         <div class="menu-main">
-            <button>Home</button>
-            <button>Bots</button>
-            <button>Ratings</button>
-            <button>Profit</button>
+            <button class="mm-btn">Home</button>
+            <button class="mm-btn">Bots</button>
+            <button class="mm-btn">Ratings</button>
+            <button class="mm-btn">Profit</button>
         </div>
     </main>
     <div id="viewport"></div>
@@ -107,7 +113,6 @@
     <script>
         // Init TWA
         Telegram.WebApp.ready();
-        Telegram.WebApp.MainButton.hide();
         Telegram.WebApp.expand();
         // Event occurs whenever theme settings are changed in the user's Telegram app (including switching to night mode).
         Telegram.WebApp.onEvent('themeChanged', function() {
@@ -121,7 +126,6 @@
         Telegram.WebApp.MainButton.onClick(function () {
             Telegram.WebApp.showAlert('Main Button was clicked')
         });	
-        Telegram.WebApp.MainButton.show();
 
         // Function to call showPopup API
         function showPopup() {
