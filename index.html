@@ -102,21 +102,42 @@
             display: flex;
             gap: 10px;
             height: 50px;
+            width: 100%;
+        }
+
+        .rating-body {
+            width: 100%;
+            display: flex;
+            gap: 50%;
         }
 
         .rating-bottom {
             display: flex;
             gap: 0px;
             height: 50px;
+            width: 100%;
         }
 
         .rating-bottom-param {
-            width: 25%;
+            width: 50%;
             height: 50px;
         }
 
         .main-body {
             margin-top: 100px;
+            width: 100%;
+        }
+
+        .rating-ul {
+            list-style: none;
+            height: 80%;
+        }
+
+        .rating-li {
+            height: 200px;
+            width: 100%;
+            background-color: #81C3F6;
+            margin-bottom: 10px;
         }
     </style>
 </head>
@@ -125,12 +146,14 @@
     <main>
         <div class="menu-top">
             <button class="tm-btn">Назад</button>
+            <div>App Name</div>
+            <div></div>
             <button class="tm-btn">Profile</button>
         </div>
         <div class="main-body">
             <h1>Top bots</h1>
-            <ul style="list-style: none; height: 50%">
-                <li style="height: 200px;">
+            <ul class="rating-ul">
+                <li class="rating-li">
                     <div class="rating-row rating-header">
                         <div class="rating-avatar">ava</div>
                         <div class="rating-name">MOMO/OMOM</div>
@@ -145,7 +168,7 @@
                         <div class="rating-bottom-param">Param 2</div>
                     </div>
                 </li>
-                <li>
+                <li class="rating-li">
                     <div class="rating-row rating-header">
                         <div class="rating-avatar">ava</div>
                         <div class="rating-name">MOMO/OMOM</div>
@@ -160,7 +183,7 @@
                         <div class="rating-bottom-param">Param 2</div>
                     </div>
                 </li>
-                <li>
+                <li class="rating-li">
                     <div class="rating-row rating-header">
                         <div class="rating-avatar">ava</div>
                         <div class="rating-name">MOMO/OMOM</div>
